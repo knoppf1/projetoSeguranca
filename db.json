@@ -1,0 +1,26 @@
+{
+  "cadastros": [
+    {
+      "id": 1,
+      "nome": "Fabiano",
+      "cpf": "123456789",
+      "dataNascimento": "10/03/1974",
+      "email": "teste@com",
+      "telefone": "",
+      "endereco": "",
+      "latitude": 0,
+      "longitude": 0
+    },
+    {
+      "id": 2,
+      "nome": "Fabiano",
+      "cpf": "123456789",
+      "dataNascimento": "10/03/1974",
+      "email": "teste@com",
+      "telefone": "",
+      "endereco": "",
+      "latitude": 0,
+      "longitude": 0
+    }
+  ]
+}

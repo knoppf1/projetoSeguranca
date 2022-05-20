@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CadastroRoutingModule } from './cadastro-routing.module';
 import { CadastroViewComponent } from './cadastro-view/cadastro-view.component';
 import { CadastroListComponent } from './cadastro-list/cadastro-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { CadastroListComponent } from './cadastro-list/cadastro-list.component';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     CadastroRoutingModule
   ]
 })

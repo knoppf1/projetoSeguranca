@@ -5,12 +5,12 @@ import { CadastroViewComponent } from './cadastro-view/cadastro-view.component';
 
 const routes: Routes = [
   {
-    path: 'list',
+    path: 'cadastro',
     component: CadastroListComponent
     },
     // {
     //   path: 'view',
-    //   component: CadastroBaseViewComponent
+    //   component: CadastroViewComponent
     // },
     {
       path: 'view',

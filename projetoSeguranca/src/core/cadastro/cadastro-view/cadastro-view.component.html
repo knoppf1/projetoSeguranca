@@ -1,1 +1,73 @@
-<p>cadastro-view works!</p>
+
+<div class="container-fluid flex-grow-1 container-p-y">
+
+  <div class="card-body" [formGroup]="frmForm" >
+
+    <div class="form-row">
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome"
+          formControlName="nome"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">CPF</label>
+        <input type="text" class="form-control" id="cpf"
+          formControlName="cpf"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Data Nascimento</label>
+        <input type="text" class="form-control" id="dataNascimento"
+          formControlName="dataNascimento"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" id="email"
+          formControlName="email"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Telefone</label>
+        <input type="text" class="form-control" id="telefone"
+          formControlName="telefone"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Endereço</label>
+        <input type="text" class="form-control" id="endereco"
+          formControlName="endereco"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-6 col-sm-6">
+        <label class="form-label">Latitude</label>
+        <input type="numeber" class="form-control" id="latitude"
+          formControlName="latitude"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-6 col-sm-6">
+        <label class="form-label">Longitude</label>
+        <input type="numeber" class="form-control" id="longitude"
+          formControlName="longitude"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-12 col-sm-12 mt-4">
+        <button type="submit" class="btn btn-primary" (click)="save($event)">Salvar</button>
+        <a tabindex="0" [routerLink]="['']" class="btn
+          btn-outline-secondary">Voltar</a>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

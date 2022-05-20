@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 import { MapaRoutingModule } from './mapa-routing.module';
 import { MapaViewComponent } from './mapa-view/mapa-view.component';
 
@@ -11,7 +12,8 @@ import { MapaViewComponent } from './mapa-view/mapa-view.component';
   ],
   imports: [
     CommonModule,
-    MapaRoutingModule
+    MapaRoutingModule,
+
   ]
 })
 export class MapaModule { }

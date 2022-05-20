@@ -7,28 +7,34 @@ import { MapaViewComponent } from 'src/core/mapa/mapa-view/mapa-view.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'list',
+    redirectTo: 'cadastro',
     pathMatch: 'full'
 },
 {
-  path: 'list',
+  path: 'cadastro',
   children: [
     {
       path: '',
       component: CadastroListComponent
     },
-  ],
-},
-{
-  path: 'view',
-  children: [
     {
-      path: '',
+      path: 'view',
       component: CadastroViewComponent
     },
+  ],
 
-]
+
 },
+// {
+//   path: 'view',
+//   children: [
+//     {
+//       path: '',
+//       component: CadastroViewComponent
+//     },
+
+// ]
+// },
 {
   path: 'mapa',
   children: [

@@ -29,5 +29,15 @@ export class CadastroService {
     return this.http.delete(this.apiUrl + 'cadastros/'+id);
   }
 
+  editar(id: number, data: any): Observable<any> {
+    console.log('id',id);
+    console.log('dados',data);
+    return this.http.put(this.apiUrl+'cadastros/'+id,data);
+  }
+
+  buscar(id: number): Observable<any> {
+    return this.http.get(this.apiUrl+'cadastros/'+id);
+  }
+
 
 }

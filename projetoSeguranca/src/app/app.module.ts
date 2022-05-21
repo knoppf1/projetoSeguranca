@@ -1,4 +1,4 @@
-import { MapaModule } from './../core/mapa/mapa.module';
+
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CadastroModule } from 'src/core/cadastro/cadastro.module';
+import { MapaModule } from 'src/core/mapa/mapa.module';
 
 @NgModule({
   declarations: [

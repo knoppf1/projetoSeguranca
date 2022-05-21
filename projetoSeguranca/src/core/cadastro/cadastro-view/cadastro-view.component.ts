@@ -23,6 +23,9 @@ export class CadastroViewComponent implements OnInit {
   ngOnInit(): void {
     this.id = +this.route.snapshot.paramMap.get('id')!;
     this.frmForm = this.createForm();
+    if (this.id != 0){
+      this.load();
+    }
   }
 
 
@@ -35,17 +38,38 @@ export class CadastroViewComponent implements OnInit {
      email: [''],
      telefone : [''],
      endereco : [''],
-     latitude : [0],
-     longitude : [0],
+     corHexa: ['#FF0000'],
+     lat : [0],
+     lng : [0],
     });
   }
 
-  save($event: any){
+
+  load(){
+    this.cadastroService.buscar(this.id).subscribe(res =>{
+      this.frmForm.patchValue(res);
+    });
+   }
+
+  save1($event: any){
     console.log('Formulario', this.frmForm.value)
     this.cadastroService.adicionar(this.frmForm.value).subscribe(res =>{
       this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
         this.router.navigate(['view']))
     })
   }
+
+  save(_$event: any) {
+      if(this.id != 0){
+        this.cadastroService.editar(this.id, this.frmForm.value).subscribe(res =>{
+        });
+      }
+      else{
+        this.cadastroService.adicionar(this.frmForm.value).subscribe(res =>{
+        });
+      }
+      this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
+        this.router.navigate(['/list']));
+    }
 
 }

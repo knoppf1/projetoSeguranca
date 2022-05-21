@@ -6,21 +6,23 @@
       "cpf": "123456789",
       "dataNascimento": "10/03/1974",
       "email": "teste@com",
-      "telefone": "",
-      "endereco": "",
-      "latitude": 0,
-      "longitude": 0
+      "telefone": "(47) 999054695",
+      "endereco": "Rua 4100",
+      "corHexa": "#FF0000",
+      "lat": -26.7212323,
+      "lng": -48.6890343
     },
     {
       "id": 2,
-      "nome": "Fabiano",
+      "nome": "Cicomita",
       "cpf": "123456789",
       "dataNascimento": "10/03/1974",
-      "email": "teste@com",
+      "email": "teste@com.br",
       "telefone": "",
       "endereco": "",
-      "latitude": 0,
-      "longitude": 0
+      "corHexa": "#FF0000",
+      "lat": -26.7299539,
+      "lng": -48.6828908
     }
   ]
 }

@@ -1,4 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-ligth">
+<h1> {{texto}}</h1>
+
+<agm-map [latitude]="lat" [zoom]="zoom" [longitude]="lng">
+  <agm-marker  [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+
+
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-ligth">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="../assets/logo_CONSEG.png" alt="..." width="60" height="60" class="d-inline-block align-text-top">
@@ -7,4 +16,4 @@
   </nav>
   <div class="container">
     <router-outlet></router-outlet>
-  </div>
+  </div> -->

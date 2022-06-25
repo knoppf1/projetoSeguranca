@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CadastroService } from 'src/core/cadastro/cadastro.service';
 
+
 @Component({
   selector: 'app-mapa-view',
   templateUrl: './mapa-view.component.html',
@@ -17,6 +18,8 @@ export class MapaViewComponent implements OnInit {
    markers: any[] = [];
    infoWindowOpened: any = null
    previous_info_window: any = null
+
+
 
   constructor(
     private cadastroService: CadastroService
@@ -66,27 +69,27 @@ export class MapaViewComponent implements OnInit {
     }
   }
 
-  // mapClicked(_$event: google.maps.InfoWindowHandlerMap): void {
+  mapClicked(_$event: google.maps.InfoWindowHandlerMap): void {
 
-  //   if (this.previous_info_window != null) {
-  //     this.previous_info_window.close()
-  //   }
+    if (this.previous_info_window != null) {
+      this.previous_info_window.close()
+    }
 
-  //   // $event.close();
-  //   // console.log('evento',$event);
+    // $event.close();
+    // console.log('evento',$event);
 
-  //   //   if (this.infoWindow) {
-  //   //     this.infoWindow.close();
-  //   //  }
-  //   // this.markers.push({
-  //   //   lat: $event.latLng.lat(),
-  //   //   lng: $event.latLng.lng(),
-  //   //   draggable: true,
-  //   //   icon: ""
-  //   // });
-  // }
+    //   if (this.infoWindow) {
+    //     this.infoWindow.close();
+    //  }
+    // this.markers.push({
+    //   lat: $event.latLng.lat(),
+    //   lng: $event.latLng.lng(),
+    //   draggable: true,
+    //   icon: ""
+    // });
+  }
 
-  markerDragEnd(m: marker, _$event: MouseEvent) {
+  markerDragEnd(m: marker, $event: MouseEvent) {
     // console.log('dragEnd', m, $event);
   }
 

@@ -14,12 +14,7 @@ import { MapaViewComponent } from './mapa-view/mapa-view.component';
   imports: [
     CommonModule,
     MapaRoutingModule,
-    AgmCoreModule.forRoot({
-      // please get your own API key here:
-      // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
-      apiKey: 'AIzaSyBwiUbgM25L_ICMssYLnHmfvosCiB54LwI'
-
-    })
+    AgmCoreModule,
   ]
 })
 export class MapaModule { }

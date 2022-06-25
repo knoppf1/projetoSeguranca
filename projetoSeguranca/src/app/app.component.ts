@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'projetoSeguranca';
+  // title = 'projetoSeguranca';
+  texto : string = 'Wenceslau Braz - Cuidado com as cargas';
+  lat: number = -23.8779431;
+  lng: number = -49.8046873;
+  zoom: number = 15;
 }

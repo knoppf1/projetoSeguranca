@@ -32,7 +32,7 @@ export class CadastroViewComponent implements OnInit {
   createForm(): FormGroup {
     return this.fb.group({
      id : [this.id],
-     nome : [''],
+     nome : ['', [Validators.required, Validators.minLength(2)]],
      cpf : [''],
      dataNascimento : [''],
      email: [''],
@@ -44,8 +44,13 @@ export class CadastroViewComponent implements OnInit {
     });
   }
 
+  get f() {
+        return this.frmForm.controls;
+  }
+
 
   load(){
+    console.log('form controls',this.frmForm.controls);
     this.cadastroService.buscar(this.id).subscribe(res =>{
       this.frmForm.patchValue(res);
     });
@@ -60,6 +65,7 @@ export class CadastroViewComponent implements OnInit {
   }
 
   save(_$event: any) {
+    console.log('Formulario', this.frmForm.controls);
       if(this.id != 0){
         this.cadastroService.editar(this.id, this.frmForm.value).subscribe(res =>{
         });

@@ -13,18 +13,6 @@
       "lng": -48.6890343
     },
     {
-      "id": 2,
-      "nome": "Cicomita",
-      "cpf": "123456789",
-      "dataNascimento": "10/03/1974",
-      "email": "teste@com.br",
-      "telefone": "",
-      "endereco": "",
-      "corHexa": "#FF0000",
-      "lat": -26.7299539,
-      "lng": -48.6828908
-    },
-    {
       "id": 3,
       "nome": "José",
       "cpf": "32145",
@@ -35,6 +23,18 @@
       "corHexa": "#FF0000",
       "lat": "10",
       "lng": "10"
+    },
+    {
+      "id": 4,
+      "nome": "Louro José",
+      "cpf": "12345678912",
+      "dataNascimento": "15/08/1969",
+      "email": "louro@email.com",
+      "telefone": "",
+      "endereco": "",
+      "corHexa": "#FF0000",
+      "lat": "1",
+      "lng": "1"
     }
   ]
 }

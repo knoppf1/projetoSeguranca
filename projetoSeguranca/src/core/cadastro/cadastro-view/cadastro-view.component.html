@@ -9,14 +9,10 @@
         <input type="text" class="form-control" id="nome"
           formControlName="nome"  autofocus="true">
         <div class="clearfix"></div>
+        <ng-container *ngIf="f['nome'].touched">
+          <span class="erro"*ngIf="f['nome'].errors">Campo Obrigatório</span>
+        </ng-container>
       </div>
-
-      <!-- <div class="form-group col-md-12 col-sm-12">
-        <label class="form-label">nome</label>
-        <input type="text" class="form-control" id="nome"
-          formControlName="nome"  #nome (keyup.enter)="save($event)" autofocus="true">
-        <div class="clearfix"></div>
-      </div> -->
 
       <div class="form-group col-md-12 col-sm-12">
         <label class="form-label">CPF</label>
@@ -33,10 +29,18 @@
       </div>
 
       <div class="form-group col-md-12 col-sm-12">
-        <label class="form-label">Email</label>
+        <label class="form-label">Email *</label>
         <input type="email" class="form-control" id="email"
           formControlName="email"  autofocus="true">
         <div class="clearfix"></div>
+        <ng-container *ngIf="frmForm.controls['email'].touched">
+          <span class="erro" *ngIf="frmForm.controls['email'].errors?.['required']">
+              Campo obrigatório
+          </span>
+          <span class="erro" *ngIf="frmForm.controls['email'].errors?.['email']">
+              E-mail inválido
+          </span>
+      </ng-container>
       </div>
 
       <div class="form-group col-md-12 col-sm-12">
@@ -68,7 +72,7 @@
       </div>
 
       <div class="form-group col-md-12 col-sm-12 mt-4">
-        <button type="submit" class="btn btn-primary" (click)="save($event)">Salvar</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!frmForm.valid" (click)="save($event)">Salvar</button>
         <a tabindex="0" [routerLink]="['']" class="btn
           btn-outline-secondary">Voltar</a>
       </div>

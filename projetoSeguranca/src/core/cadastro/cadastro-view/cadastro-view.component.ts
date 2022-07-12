@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+
 import { CadastroService } from '../cadastro.service';
 
 @Component({
@@ -32,10 +33,10 @@ export class CadastroViewComponent implements OnInit {
   createForm(): FormGroup {
     return this.fb.group({
      id : [this.id],
-     nome : ['', [Validators.required, Validators.minLength(2)]],
+     nome : ['', Validators.required],
      cpf : [''],
      dataNascimento : [''],
-     email: [''],
+     email: ['', [Validators.email,Validators.required]],
      telefone : [''],
      endereco : [''],
      corHexa: ['#FF0000'],
@@ -50,22 +51,25 @@ export class CadastroViewComponent implements OnInit {
 
 
   load(){
-    console.log('form controls',this.frmForm.controls);
-    this.cadastroService.buscar(this.id).subscribe(res =>{
-      this.frmForm.patchValue(res);
-    });
+
+      this.cadastroService.buscar(this.id).subscribe(res =>{
+        this.frmForm.patchValue(res);
+      });
+
    }
 
-  save1($event: any){
-    console.log('Formulario', this.frmForm.value)
-    this.cadastroService.adicionar(this.frmForm.value).subscribe(res =>{
-      this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
-        this.router.navigate(['view']))
-    })
-  }
+  // save1($event: any){
+  //   console.log('Formulario', this.frmForm.value)
+  //   this.cadastroService.adicionar(this.frmForm.value).subscribe(res =>{
+  //     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
+  //       this.router.navigate(['view']))
+  //   })
+  // }
 
   save(_$event: any) {
-    console.log('Formulario', this.frmForm.controls);
+    if (this.frmForm.valid){
+      console.log('Formulario Válido!', this.f)
+
       if(this.id != 0){
         this.cadastroService.editar(this.id, this.frmForm.value).subscribe(res =>{
         });
@@ -77,5 +81,10 @@ export class CadastroViewComponent implements OnInit {
       this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
         this.router.navigate(['/list']));
     }
+    else{
+      console.log('Formulario Invalido', this.f)
+    }
+
+  }
 
 }

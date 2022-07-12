@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GenericValidator } from 'src/core/GenericValidator';
+
 
 import { CadastroService } from '../cadastro.service';
 
@@ -12,6 +14,7 @@ import { CadastroService } from '../cadastro.service';
 export class CadastroViewComponent implements OnInit {
   id: number;
   frmForm: FormGroup;
+  formBuilder: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -34,7 +37,8 @@ export class CadastroViewComponent implements OnInit {
     return this.fb.group({
      id : [this.id],
      nome : ['', Validators.required],
-     cpf : [''],
+    //  cpf: [""],
+     cpf : ['', GenericValidator.isValidCpf()],
      dataNascimento : [''],
      email: ['', [Validators.email,Validators.required]],
      telefone : [''],
@@ -48,6 +52,9 @@ export class CadastroViewComponent implements OnInit {
   get f() {
         return this.frmForm.controls;
   }
+
+
+
 
 
   load(){

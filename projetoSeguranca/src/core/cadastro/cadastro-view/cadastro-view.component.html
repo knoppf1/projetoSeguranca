@@ -19,6 +19,9 @@
         <input type="text" class="form-control" id="cpf"
           formControlName="cpf"  autofocus="true">
         <div class="clearfix"></div>
+        <span class="erro" *ngIf="frmForm.get('cpf').getError('cpfNotValid')">
+          O CPF não é válido!
+        </span>
       </div>
 
       <div class="form-group col-md-12 col-sm-12">

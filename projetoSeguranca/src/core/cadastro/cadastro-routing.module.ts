@@ -8,10 +8,7 @@ const routes: Routes = [
     path: 'cadastro',
     component: CadastroListComponent
     },
-    // {
-    //   path: 'view',
-    //   component: CadastroViewComponent
-    // },
+
     {
       path: 'view',
       children: [

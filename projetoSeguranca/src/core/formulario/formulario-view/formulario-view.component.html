@@ -1,0 +1,78 @@
+<div class="container-fluid flex-grow-1 container-p-y">
+
+  <div class="card-body" [formGroup]="frmFormulario" >
+
+    <div class="form-row">
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Nome *</label>
+        <input type="text" class="form-control" id="nome"
+          formControlName="nome"  autofocus="true">
+        <div class="clearfix"></div>
+        <ng-container *ngIf="f['nome'].touched">
+          <span class="erro"*ngIf="f['nome'].errors">Campo Obrigatório</span>
+        </ng-container>
+      </div>
+
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Telefone</label>
+        <input type="text" class="form-control" id="telefone"
+          formControlName="telefone"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Tipo de problema</label>
+        <select class="form-select" id="problema" formControlName="problema" aria-label="Default select example">
+          <option value="Iluminação Pública">Iluminação Pública</option>
+          <option value="Limpeza Urbana">Limpeza Urbana</option>
+          <option value="Trânsito">Trânsito</option>
+          <option value="Segurança">Segurança</option>
+          <option value="Casa Veraneio Vazia">Casa Veraneio Vazia</option>
+          <option value="Terreno com vegetação elevada">Terreno com vegetação elevada</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Localização</label>
+        <input type="text" class="form-control" id="localizacao"
+          formControlName="localizacao"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Foto</label>
+        <input type="text" class="form-control" id="foto"
+          formControlName="foto"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-6 col-sm-12">
+        <label class="form-label">Latitude</label>
+        <input type="numeber" class="form-control" id="lat"
+          formControlName="lat"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-6 col-sm-12">
+        <label class="form-label">Longitude</label>
+        <input type="numeber" class="form-control" id="lng"
+          formControlName="lng"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+
+      <div class="form-group col-md-12 col-sm-12 mt-4">
+        <button type="submit" class="btn btn-primary" [disabled]="!frmFormulario.valid" (click)="save($event)">Salvar</button>
+        <a tabindex="0" [routerLink]="['/formulario']" class="btn
+          btn-outline-secondary">Voltar</a>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+
+</div>

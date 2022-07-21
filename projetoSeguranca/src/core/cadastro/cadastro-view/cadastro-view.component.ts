@@ -38,7 +38,7 @@ export class CadastroViewComponent implements OnInit {
      id : [this.id],
      nome : ['', Validators.required],
     //  cpf: [""],
-     cpf : ['', GenericValidator.isValidCpf()],
+     cpf : ['',  [GenericValidator.isValidCpf()]],
      dataNascimento : [''],
      email: ['', [Validators.email,Validators.required]],
      telefone : [''],

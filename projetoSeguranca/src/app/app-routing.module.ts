@@ -1,3 +1,5 @@
+import { FormularioViewComponent } from './../core/formulario/formulario-view/formulario-view.component';
+import { FormularioListComponent } from './../core/formulario/formulario-list/formulario-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroListComponent } from 'src/core/cadastro/cadastro-list/cadastro-list.component';
@@ -5,10 +7,10 @@ import { CadastroViewComponent } from 'src/core/cadastro/cadastro-view/cadastro-
 import { MapaViewComponent } from 'src/core/mapa/mapa-view/mapa-view.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'cadastro',
-    pathMatch: 'full'
+{
+  path: '',
+  redirectTo: 'cadastro',
+  pathMatch: 'full'
 },
 {
   path: 'cadastro',
@@ -22,19 +24,22 @@ const routes: Routes = [
       component: CadastroViewComponent
     },
   ],
-
-
 },
-// {
-//   path: 'view',
-//   children: [
-//     {
-//       path: '',
-//       component: CadastroViewComponent
-//     },
 
-// ]
-// },
+{
+  path: 'formulario',
+  children: [
+    {
+      path: '',
+      component: FormularioListComponent
+    },
+    {
+      path: 'view',
+      component: FormularioViewComponent
+    },
+  ],
+},
+
 {
   path: 'mapa',
   children: [
@@ -44,7 +49,8 @@ const routes: Routes = [
     },
 
 ]
-}
+},
+
 ]
 
 @NgModule({

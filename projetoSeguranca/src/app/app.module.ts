@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { CadastroModule } from 'src/core/cadastro/cadastro.module';
 import { MapaModule } from 'src/core/mapa/mapa.module';
 import { AgmCoreModule } from '@agm/core';
+import { FormularioModule } from 'src/core/formulario/formulario.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { AgmCoreModule } from '@agm/core';
     }),
     MapaModule,
     CadastroModule,
+    FormularioModule,
     AppRoutingModule
   ],
   providers: [],

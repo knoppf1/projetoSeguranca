@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CategoriaService } from 'src/core/categoria/categoria.service';
 import { FormularioService } from '../formulario.service';
 
 @Component({
@@ -12,19 +13,28 @@ export class FormularioViewComponent implements OnInit {
   id: number;
   frmFormulario: FormGroup;
   formBuilder: any;
+  toastr: any;
+  cardImageBase64: any;
+  isImageSaved: boolean;
+  categorias: any;
+  idEmpresa: number =1;
 
   constructor(
     private route: ActivatedRoute,
     private fb: FormBuilder,
     private formularioService: FormularioService,
+    private categoriaService: CategoriaService,
     private router: Router,
   ) { }
 
   ngOnInit(): void {
     this.id = +this.route.snapshot.paramMap.get('id')!;
     this.frmFormulario= this.createForm();
+    this.loadCategorias();
     if (this.id != 0){
       this.load();
+      this.loadCategorias();
+
     }
   }
 
@@ -40,6 +50,7 @@ export class FormularioViewComponent implements OnInit {
      lat : [0],
      lng : [0],
      foto : [''],
+     imagem : [''],
     });
   }
 
@@ -75,5 +86,29 @@ export class FormularioViewComponent implements OnInit {
     }
 
   }
+
+  //Carrega todas as categorias
+  loadCategorias() {
+    this.categoriaService.listarAtivos(this.idEmpresa,).subscribe(res => {
+      console.log('loadCategorias', res);
+      this.categorias = res;
+    });
+  }
+
+  // loadImagem(fileInput: any) {
+  //   this.formularioService.loadImage(fileInput).then((retorno) => {
+  //     if (retorno.codigo == "OK") {
+  //       this.cardImageBase64 = retorno.arquivo;
+  //       this.isImageSaved = true;
+
+  //       this.frmFormulario.value.imagem = retorno.arquivo;
+
+
+  //     } else {
+  //       this.toastr.error(null, retorno.msg);
+  //     }
+  //   });
+  // }
+
 
 }

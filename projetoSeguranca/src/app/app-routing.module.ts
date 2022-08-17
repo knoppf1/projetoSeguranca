@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastroListComponent } from 'src/core/cadastro/cadastro-list/cadastro-list.component';
 import { CadastroViewComponent } from 'src/core/cadastro/cadastro-view/cadastro-view.component';
 import { MapaViewComponent } from 'src/core/mapa/mapa-view/mapa-view.component';
+import { CategoriaListComponent } from 'src/core/categoria/categoria-list/categoria-list.component';
+import { CategoriaViewComponent } from 'src/core/categoria/categoria-view/categoria-view.component';
 
 const routes: Routes = [
 {
@@ -36,6 +38,20 @@ const routes: Routes = [
     {
       path: 'view',
       component: FormularioViewComponent
+    },
+  ],
+},
+
+{
+  path: 'categoria',
+  children: [
+    {
+      path: '',
+      component: CategoriaListComponent
+    },
+    {
+      path: 'view',
+      component: CategoriaViewComponent
     },
   ],
 },

@@ -1,3 +1,4 @@
+import { CategoriaModule } from './../core/categoria/categoria.module';
 
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -30,6 +31,7 @@ import { FormularioModule } from 'src/core/formulario/formulario.module';
     MapaModule,
     CadastroModule,
     FormularioModule,
+    CategoriaModule,
     AppRoutingModule
   ],
   providers: [],

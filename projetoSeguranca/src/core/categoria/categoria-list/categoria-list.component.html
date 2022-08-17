@@ -1,0 +1,41 @@
+<div class="container-fluid flex-grow-1 container-p-y">
+
+  <div class="col-4 text-right">
+    <a type="button" [routerLink]="['/view']" class="btn btn-xs btn-outline-primary mt-3">Novo</a>
+    <a type="button" [routerLink]="['/mapa']" class="btn btn-xs btn-outline-primary mt-3">Mapa</a>
+  </div>
+
+
+<div class="card-body "  >
+
+<table class="table table-striped">
+<thead>
+    <tr >
+        <th>#</th>
+        <th>Nome</th>
+        <!-- <th>Ações</th> -->
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let item of itens ">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.nome}}</td>
+        <td>
+            <button type="button" [routerLink]="['/view', item.id]" class="btn btn-xs btn-outline-info">Editar</button>
+            <button type="button" (click)="delete(item.id)" class="btn btn-xs btn-outline-danger">Excluir</button>
+        </td>
+    </tr>
+
+</tbody>
+
+</table>
+
+<div class="card-footer">
+<div class="float-left">
+    Exibindo {{itens.length}} resultados
+</div>
+</div>
+
+</div>
+
+</div>

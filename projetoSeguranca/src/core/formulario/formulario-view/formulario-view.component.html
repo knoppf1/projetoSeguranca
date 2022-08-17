@@ -23,12 +23,14 @@
       <div class="form-group col-md-12 col-sm-12">
         <label class="form-label">Tipo de problema</label>
         <select class="form-select" id="problema" formControlName="problema" aria-label="Default select example">
-          <option value="Iluminação Pública">Iluminação Pública</option>
+          <option value="0">Selecione...</option>
+          <option *ngFor="let categoria of categorias" [value]="categoria.nome">{{categoria.nome}}</option>
+          <!-- <option value="Iluminação Pública">Iluminação Pública</option>
           <option value="Limpeza Urbana">Limpeza Urbana</option>
           <option value="Trânsito">Trânsito</option>
           <option value="Segurança">Segurança</option>
           <option value="Casa Veraneio Vazia">Casa Veraneio Vazia</option>
-          <option value="Terreno com vegetação elevada">Terreno com vegetação elevada</option>
+          <option value="Terreno com vegetação elevada">Terreno com vegetação elevada</option> -->
         </select>
       </div>
 
@@ -66,6 +68,34 @@
         <a tabindex="0" [routerLink]="['/formulario']" class="btn
           btn-outline-secondary">Voltar</a>
       </div>
+
+
+      <!-- <div class="input-group mb-3 mt-4">
+        <input type="file" class="form-control" id="inputGroupFile02">
+        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+      </div> -->
+
+      <!-- <div class="logofoto modal-body mb-0 pb-0">
+        <div class="row">
+          <div class="form-group col-md-7 col-sm-12">
+            <label class="form-label">Imagem do Vídeo:</label>
+
+            <div class="fileInputProfileWrap">
+              <input type="file" id="imagem" (change)="loadImagem($event)" class="file-control" >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6 col-sm-12">
+            <ng-container *ngIf="isImageSaved; else elseTemplate">
+              <img [src]="cardImageBase64" class="img-thumbnail img-banner" />
+            </ng-container>
+            <ng-template #elseTemplate>
+              <img src="../../../../../assets/img/default.jpg" class="img-thumbnail img-banner">
+            </ng-template>
+          </div>
+        </div>
+      </div> -->
 
 
     </div>

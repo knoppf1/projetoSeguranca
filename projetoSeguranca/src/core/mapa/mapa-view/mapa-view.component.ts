@@ -9,6 +9,8 @@ import { CadastroService } from 'src/core/cadastro/cadastro.service';
 })
 export class MapaViewComponent implements OnInit {
 
+  idEmpresa: number = 1;
+
    // google maps zoom level
    zoom: number = 8;
    // // initial center position for the map
@@ -30,7 +32,7 @@ export class MapaViewComponent implements OnInit {
   }
 
   load() {
-    this.cadastroService.listar().subscribe((res)=>{
+    this.cadastroService.listarAtivos(this.idEmpresa).subscribe((res)=>{
       console.log('Resultado', res);
       this.markers = [];
       console.log('array marker', this.markers);

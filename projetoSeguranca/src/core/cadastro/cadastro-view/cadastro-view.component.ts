@@ -43,18 +43,16 @@ export class CadastroViewComponent implements OnInit {
      email: ['', [Validators.email,Validators.required]],
      telefone : [''],
      endereco : [''],
-     corHexa: ['#FF0000'],
+     corhexa: ['#FF0000'],
      lat : [0],
      lng : [0],
+     ativo:[1],
     });
   }
 
   get f() {
         return this.frmForm.controls;
   }
-
-
-
 
 
   load(){

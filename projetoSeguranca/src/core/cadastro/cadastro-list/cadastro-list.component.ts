@@ -9,6 +9,7 @@ import { CadastroService } from '../cadastro.service';
 export class CadastroListComponent implements OnInit {
 
   itens: any[] = [];
+  idEmpresa: number = 1;
 
 
   constructor(
@@ -16,22 +17,27 @@ export class CadastroListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.load();
+
+    this.loadAtivos()
   }
 
-  load(){
-    console.log('Load');
-    this.cadastroService.listar().subscribe((res)=>{
-      this.itens=res;
-    })
-  }
 
   delete(id: number) {
     if(confirm('Você deseja excluir o resgitro?')){
       this.cadastroService.delete(id).subscribe(res =>{
-      this.load();
+      this.loadAtivos();
       });
     }
+  }
+
+
+  //Banco de dados
+
+  loadAtivos() {
+    this.cadastroService.listarAtivos(this.idEmpresa).subscribe(res => {
+      console.log('Lista de Ativos', res);
+      this.itens=res;
+    });
   }
 
 }

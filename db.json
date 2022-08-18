@@ -1,100 +1,108 @@
 {
   "cadastros": [
     {
-      "id": 1,
       "nome": "Cicomita",
       "cpf": "",
       "dataNascimento": "",
       "email": "",
       "telefone": " (47) 99155361",
       "endereco": " Rua 3750 Numero 190",
-      "corHexa": "#2E8B57",
+      "corhexa": "#2E8B57",
       "lat": -26.72981,
-      "lng": -48.68296
+      "lng": -48.68296,
+      "ativo": 1,
+      "id": 5
     },
     {
-      "id": 2,
       "nome": "Fabiano Kerstner",
       "cpf": "123456789",
       "dataNascimento": "10/03/1974",
       "email": "kerstnerfabiano@gmail.com",
       "telefone": "(47) 999054695",
       "endereco": "Rua 4100 Número 406",
-      "corHexa": "#FF0000",
+      "corhexa": "#FF0000",
       "lat": -26.72725,
-      "lng": -48.6853
+      "lng": -48.6853,
+      "ativo": 1,
+      "id": 6
     },
     {
-      "id": 3,
       "nome": "José Roberto Rosa",
       "cpf": "123456789",
       "dataNascimento": "10/03/1974",
       "email": "J.rrosa60@gmail.com,",
       "telefone": "(41) 9951 0836",
       "endereco": "Rua Vitor Zimmermann 573",
-      "corHexa": "#FF0000",
+      "corhexa": "#FF0000",
       "lat": -26.7336,
-      "lng": -48.68663
+      "lng": -48.68663,
+      "ativo": 1,
+      "id": 7
     },
     {
-      "id": 4,
       "nome": "Jose Roberto Vertuan",
       "cpf": "123456789",
       "dataNascimento": "18/02/1960",
       "email": "jrobertovertuan@hotmail.com",
       "telefone": "(47) 91124730",
       "endereco": "Rua Tainha (2800) 212",
-      "corHexa": "#FF0000",
+      "corhexa": "#FF0000",
       "lat": -26.74047,
-      "lng": -48.68124
+      "lng": -48.68124,
+      "ativo": 1,
+      "id": 8
     },
     {
-      "id": 5,
       "nome": "Raphaela",
       "cpf": "123456789",
       "dataNascimento": "",
       "email": "eng.raphastaack@gmail.com",
       "telefone": "(47) 96580226",
       "endereco": "Rua das Camélias, 222, Casa 02",
-      "corHexa": "#FF0000",
+      "corhexa": "#FF0000",
       "lat": -26.77626,
-      "lng": -48.67826
+      "lng": -48.67826,
+      "ativo": 1,
+      "id": 9
     },
     {
-      "id": 6,
       "nome": "Renate",
       "cpf": "123456789",
       "dataNascimento": "20/07/1951",
       "email": "renatearioli@yahoo.com.br",
       "telefone": "(41) 91276407",
       "endereco": "Rua 850 n° 28 ap602",
-      "corHexa": "#FF0000",
+      "corhexa": "#FF0000",
       "lat": -26.76489,
-      "lng": -48.67167
+      "lng": -48.67167,
+      "ativo": 1,
+      "id": 10
     },
     {
-      "id": 7,
       "nome": "Valtamir",
       "cpf": "123456789",
       "dataNascimento": "28/06/1962",
       "email": "Valtamir.marques@terra.com.br",
       "telefone": "(47) 99641078",
       "endereco": "Rua Santa Cruz (3100), n•155, casa 1",
-      "corHexa": "#FF0000",
+      "corhexa": "#FF0000",
       "lat": -26.73628,
-      "lng": -48.68411
+      "lng": -48.68411,
+      "ativo": 1,
+      "id": 11
     },
     {
-      "id": 8,
       "nome": "Gisa",
       "cpf": "123456789",
       "dataNascimento": "27/07/1982",
       "email": "gisellemuller@hotmail.com ",
       "telefone": "(47) 84356094",
       "endereco": "Avenida Nereu Ramos 5357",
-      "corHexa": "#FF0000",
+      "corhexa": "#FF0000",
       "lat": -26.71931,
-      "lng": -48.68281
+      "lng": -48.68281,
+      "ativo": 1,
+      "id": 12
     }
   ],
   "formularios": [

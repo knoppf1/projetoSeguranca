@@ -7,6 +7,7 @@ import { CadastroViewComponent } from 'src/core/cadastro/cadastro-view/cadastro-
 import { MapaViewComponent } from 'src/core/mapa/mapa-view/mapa-view.component';
 import { CategoriaListComponent } from 'src/core/categoria/categoria-list/categoria-list.component';
 import { CategoriaViewComponent } from 'src/core/categoria/categoria-view/categoria-view.component';
+import { AcessoComponent } from 'src/core/acesso/acesso/acesso.component';
 
 const routes: Routes = [
 {
@@ -62,6 +63,16 @@ const routes: Routes = [
     {
       path: '',
       component: MapaViewComponent
+    },
+
+]
+},
+{
+  path: 'auth',
+  children: [
+    {
+      path: '',
+      component: AcessoComponent
     },
 
 ]

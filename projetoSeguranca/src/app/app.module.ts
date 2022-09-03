@@ -1,3 +1,4 @@
+import { AcessoModule } from './../core/acesso/acesso.module';
 import { CategoriaModule } from './../core/categoria/categoria.module';
 
 import { NgModule } from '@angular/core';
@@ -32,6 +33,7 @@ import { FormularioModule } from 'src/core/formulario/formulario.module';
     CadastroModule,
     FormularioModule,
     CategoriaModule,
+    AcessoModule,
     AppRoutingModule
   ],
   providers: [],

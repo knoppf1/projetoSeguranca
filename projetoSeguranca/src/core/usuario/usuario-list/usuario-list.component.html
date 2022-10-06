@@ -1,0 +1,51 @@
+<div class="container-fluid flex-grow-1 container-p-y">
+
+  <div class="col-4 text-right">
+    <a type="button" [routerLink]="['/usuario/view']" class="btn btn-xs btn-outline-primary mt-3">Novo</a>
+  </div>
+
+
+<div class="card-body "  >
+
+<table class="table table-striped">
+<thead>
+    <tr >
+        <th>#</th>
+        <th>Nome</th>
+        <th>Apelido</th>
+        <!-- <th>Senha</th> -->
+        <th>Email</th>
+        <th>Cargo</th>
+        <th>Tipo</th>
+        <th>Ações</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let item of itens ">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.nome}}</td>
+        <td>{{item.apelido}}</td>
+        <!-- <td>{{item.senha}}</td> -->
+        <td>{{item.email}}</td>
+        <td>{{item.cargo}}</td>
+        <td>{{item.tipo}}</td>
+        <td>
+            <button type="button" [routerLink]="['/usuario/view', item.id]" class="btn btn-xs btn-outline-info">Editar</button>
+            <button type="button" (click)="delete(item.id)" class="btn btn-xs btn-outline-danger">Excluir</button>
+        </td>
+    </tr>
+
+</tbody>
+
+</table>
+
+<div class="card-footer">
+<div class="float-left">
+    Exibindo {{itens.length}} resultados
+</div>
+</div>
+
+</div>
+
+</div>
+

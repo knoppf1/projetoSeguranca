@@ -8,11 +8,13 @@ import { MapaViewComponent } from 'src/core/mapa/mapa-view/mapa-view.component';
 import { CategoriaListComponent } from 'src/core/categoria/categoria-list/categoria-list.component';
 import { CategoriaViewComponent } from 'src/core/categoria/categoria-view/categoria-view.component';
 import { AcessoComponent } from 'src/core/acesso/acesso/acesso.component';
+import { UsuarioListComponent } from 'src/core/usuario/usuario-list/usuario-list.component';
+import { UsuarioViewComponent } from 'src/core/usuario/usuario-view/usuario-view.component';
 
 const routes: Routes = [
 {
   path: '',
-  redirectTo: 'cadastro',
+  redirectTo: 'mapa',
   pathMatch: 'full'
 },
 {
@@ -53,6 +55,19 @@ const routes: Routes = [
     {
       path: 'view',
       component: CategoriaViewComponent
+    },
+  ],
+},
+{
+  path: 'usuario',
+  children: [
+    {
+      path: '',
+      component: UsuarioListComponent
+    },
+    {
+      path: 'view',
+      component: UsuarioViewComponent
     },
   ],
 },

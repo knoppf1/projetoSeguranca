@@ -38,6 +38,7 @@ export class AuthService {
         if (res.token) {
           this.token = res.token;
           localStorage.setItem('tokenecontadi', this.token);
+          localStorage.setItem('token', this.token);
         };
       };
 

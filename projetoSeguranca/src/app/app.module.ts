@@ -1,3 +1,4 @@
+import { UsuarioModule } from './../core/usuario/usuario.module';
 import { AcessoModule } from './../core/acesso/acesso.module';
 import { CategoriaModule } from './../core/categoria/categoria.module';
 
@@ -32,6 +33,7 @@ import { FormularioModule } from 'src/core/formulario/formulario.module';
     MapaModule,
     CadastroModule,
     FormularioModule,
+    UsuarioModule,
     CategoriaModule,
     AcessoModule,
     AppRoutingModule

@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class CadastroService {
 
-  private readonly apiUrl: string = 'http://localhost:3000/';
+  // private readonly apiUrl: string = 'http://localhost:3000/';
 
   constructor(
     private http: HttpClient,

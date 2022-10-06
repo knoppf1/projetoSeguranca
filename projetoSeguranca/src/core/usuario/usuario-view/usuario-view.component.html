@@ -1,0 +1,80 @@
+<div class="container-fluid flex-grow-1 container-p-y">
+
+  <div class="card-body" [formGroup]="frmForm" >
+
+    <div class="form-row">
+
+
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome"
+          formControlName="nome"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Apelido</label>
+        <input type="text" class="form-control" id="apelido"
+          formControlName="apelido"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Senha</label>
+        <input type="text" class="form-control" id="senha"
+          formControlName="senha"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="form-group col-md-12 col-sm-12">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" id="email"
+          formControlName="email"  autofocus="true">
+        <div class="clearfix"></div>
+      </div>
+
+
+        <div class="form-group col-md-6 col-sm-6">
+          <label class="form-label">Cargo</label>
+          <input type="text" class="form-control" id="cargo"
+            formControlName="cargo"  autofocus="true">
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="form-group col-md-2 col-sm-2">
+          <label class="form-label">Tipo</label>
+          <input type="number" class="form-control" id="tipo"
+            formControlName="tipo"  autofocus="true">
+          <div class="clearfix"></div>
+        </div>
+
+        <!-- <div class="form-group col-md-4 col-sm-4">
+          <label class="form-label">Tipo de Usuário</label>
+          <select class="form-select" id="tipo" formControlName="tipo" aria-label="Default select example">
+            <option value="0">Selecione...</option>
+            <option value="1">Administrador</option>
+            <option value="2">Usuario</option>
+          </select>
+        </div> -->
+
+
+      <div class="form-group col-md-12 col-sm-12 mt-4">
+        <button type="submit" class="btn btn-primary" [disabled]="!frmForm.valid" (click)="save($event)">Salvar</button>
+        <a tabindex="0" [routerLink]="['/usuario']" class="btn
+          btn-outline-secondary">Voltar</a>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+</div>
+
